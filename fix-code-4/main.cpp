@@ -2,9 +2,6 @@
 #include <string>
 using namespace std;
 
-float get_temperature(int input) {
-  return input * 1;
-}
 
 float get_temperature(float input) {
   return input * 100;
