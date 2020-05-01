@@ -7,5 +7,5 @@ string get_temperature() {
 }
 
 int main() {
-  int temp = get_temperature();
+  string temp = get_temperature();
 }

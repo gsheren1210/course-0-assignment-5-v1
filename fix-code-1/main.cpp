@@ -12,7 +12,7 @@ int main() {
 
   cout << "Enter a number: ";
   cin >> val1;
-  cout << "Enter another number; ";
+  cout << "Enter another number: ";
   cin >> val2;
   cout << "The sum of these numbers is: " << addNumbers(val1, val2);
 }

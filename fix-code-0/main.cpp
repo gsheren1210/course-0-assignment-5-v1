@@ -12,5 +12,5 @@ float get_temperature() {
 
 int main() {
   cout << "The temperature is: " << get_temperature() << endl;
-  cout << "The age is: " << GetAge() << endl;
+  cout << "The age is: " << getAge() << endl;
 }
