@@ -9,43 +9,44 @@ int GetInputNumber(){
   return number;
 }
 
-string GetInputOperator(){
+char GetInputOperator(){
   cout << "Enter an operator: ";
-  char op;
-  cin >> op;
-  return op;
+  char sign;
+  cin >> sign;
+  return sign;
 }
 
-int RunningTotal(){
-  if (operator == '+') {
-    running_total = running_total + second_number;
+int RunningTotal(int running_total, int current_number, char sign){
+  if (sign == '+') {
+    running_total = running_total + current_number;
   }
-  if (operator == '%') {
-    running_total = running_total % next_number;
+  if (sign == '-') {
+    running_total = running_total - current_number;
   }
-  if (operator == '*') {
-    running_total = running_total * next_number;
+  if (sign == '%') {
+    running_total = running_total % current_number;
   }
-  if (operator == '/') {
-    running_total = running_total / next_number;
+  if (sign == '*') {
+    running_total = running_total * current_number;
+  }
+  if (sign == '/') {
+    running_total = running_total / current_number;
   }
   return running_total;
 }
 
 int main() {
-  int running_total = 0;
-  int first_number = GetInputNumber();
-  char operator = GetInputOperator();
-  running_total = RunningTotal(operator);
+  int running_total = GetInputNumber();
+  char sign = GetInputOperator();
 
-  int second_number = GetInputNumber();
-  char operator = GetInputOperator(); 
-  running_total = RunningTotal(operator); 
+  int current_number = GetInputNumber();
+  sign = GetInputOperator(); 
+  running_total = RunningTotal(running_total, current_number, sign); 
 
-  int third_number = GetInputNumber();
-  char operator = GetInputOperator();  
-  running_total = RunningTotal(operator);
-
+  current_number = GetInputNumber();
+  //char operator = GetInputOperator();  
+  running_total = RunningTotal(running_total, current_number, sign);
+/*
   int fourth_number = GetInputNumber();
   char operator = GetInputOperator();  
   running_total = RunningTotal(operator);
@@ -59,7 +60,7 @@ int main() {
   running_total = RunningTotal(operator);
 
   int seventh _number = GetInputNumber();
-  running_total = RunningTotal(operator);
+  running_total = RunningTotal(operator);*/
 
   cout << " = " << running_total << endl;
 }
