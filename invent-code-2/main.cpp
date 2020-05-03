@@ -3,7 +3,7 @@
 using namespace std;
 
 int GetInputNumber(){
-  cout << "Enter an interger: ";
+  cout << "Enter a number: ";
   int number;
   cin >> number;
   return number;
@@ -36,31 +36,32 @@ int RunningTotal(int running_total, int current_number, char sign){
 }
 
 int main() {
+  //first number
   int running_total = GetInputNumber();
   char sign = GetInputOperator();
-
+  //second number
   int current_number = GetInputNumber();
-  sign = GetInputOperator(); 
   running_total = RunningTotal(running_total, current_number, sign); 
-
-  current_number = GetInputNumber();
-  //char operator = GetInputOperator();  
+  //third number
+  sign = GetInputOperator(); 
+  current_number = GetInputNumber(); 
   running_total = RunningTotal(running_total, current_number, sign);
-/*
-  int fourth_number = GetInputNumber();
-  char operator = GetInputOperator();  
-  running_total = RunningTotal(operator);
-
-  int fifth_number = GetInputNumber();
-  char operator = GetInputOperator();
-  running_total = RunningTotal(operator);
-
-  int sixth_number = GetInputNumber();
-  char operator = GetInputOperator();
-  running_total = RunningTotal(operator);
-
-  int seventh _number = GetInputNumber();
-  running_total = RunningTotal(operator);*/
+  //fourth number
+  sign = GetInputOperator(); 
+  current_number = GetInputNumber(); 
+  running_total = RunningTotal(running_total, current_number, sign);
+  //fifth number
+  sign = GetInputOperator(); 
+  current_number = GetInputNumber(); 
+  running_total = RunningTotal(running_total, current_number, sign);
+  //sixth number
+  sign = GetInputOperator(); 
+  current_number = GetInputNumber(); 
+  running_total = RunningTotal(running_total, current_number, sign);
+  //seventh number
+  sign = GetInputOperator(); 
+  current_number = GetInputNumber(); 
+  running_total = RunningTotal(running_total, current_number, sign);
 
   cout << " = " << running_total << endl;
 }
